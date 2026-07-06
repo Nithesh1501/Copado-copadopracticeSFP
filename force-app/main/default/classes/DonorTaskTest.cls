@@ -5,8 +5,7 @@ private class DonorTaskTest {
         insert t;
         Task result = [SELECT Subject FROM Task WHERE Id = :t.Id];
         System.assert(result.Subject.contains('[Donor Report]'));
-
-    }
+    }   
 
     @isTest static void testNoDuplicatePrefix() {
         Task t = new Task(Subject = '[Donor Report] Follow up call');
